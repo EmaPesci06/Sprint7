@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+
+{% if 'ok' in request.GET %}
+    <p>Su mensaje se ha enviado correctamente</p>
+{% endif %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <th><label for="{{ login.name.id_for_label }}">Nombre:</label></th>
+            <td>{{ login.name }}</td>
+        </tr>
+        <tr>
+            <th><label for="{{ login.surname.id_for_label }}">Apellido:</label></th>
+            <td>{{ login.surname }}</td>
+        </tr>
+        <tr>
+            <th><label for="{{ login.email.id_for_label }}">Correo Electrónico:</label></th>
+            <td>{{ login.email }}</td>
+        </tr>
+    </table>
+    <input type="submit" value="Enviar"/>
+</form>
+
+</body>
+
+</html>
