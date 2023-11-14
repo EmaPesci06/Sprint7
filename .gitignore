@@ -1,0 +1,13 @@
+Add-Content .gitignore @"
+# Ignorar archivos temporales
+*.tmp
+
+# Ignorar archivos de configuración local
+config.local
+
+# Ignorar el directorio de dependencias
+/node_modules/
+"@
+
+# Ignorar el pycache
+__pycache__/
