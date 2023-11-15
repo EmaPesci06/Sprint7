@@ -11,3 +11,6 @@ config.local
 
 # Ignorar el pycache
 __pycache__/
+
+
+.vscode
