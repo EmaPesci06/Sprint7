@@ -9,6 +9,10 @@
 
 <body>
 
+{% extends 'core/base.html' %}
+
+{% block content %}
+
 {% if 'ok' in request.GET %}
     <p>Su mensaje se ha enviado correctamente</p>
 {% endif %}
@@ -31,6 +35,8 @@
     </table>
     <input type="submit" value="Enviar"/>
 </form>
+{% endblock %}
+
 
 </body>
 
