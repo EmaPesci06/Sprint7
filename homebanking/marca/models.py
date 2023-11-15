@@ -5,7 +5,7 @@ from django.db import models
 class Marca(models.Model):
     id_marca = models.AutoField(primary_key=True)
     id_tarjeta = models.IntegerField()
-    brand = models.IntegerField()
+    brand = models.TextField()
 
     class Meta:
         managed = False
