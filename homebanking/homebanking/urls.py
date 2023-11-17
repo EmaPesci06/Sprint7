@@ -17,8 +17,7 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
-from login import views as login_views
+from django.urls import path, include
 from home import views as home_template
 from cuentas import views as cuentas_template
 from direcciones import views as direcciones_template
@@ -27,12 +26,12 @@ from prestamos import views as prestamos_template
 from tarjetas import views as tarjetas_template
 
 urlpatterns = [
-    path('', login_views.user_login , name="login"),
-    path('home/', home_template.home_template, name='home'),
+    path('', home_template.home_template, name='home'),
     path('cuentas/', cuentas_template.cuentas_templates, name='cuentas'),
     path('direcciones/', direcciones_template.direcciones_template, name='direcciones'),
     path('movimientos/', movimientos_template.movimientos_template, name='movimientos'),
     path('prestamo/', prestamos_template.prestamos_template, name='prestamos'),
     path('tarjetas/', tarjetas_template.tarjetas_template, name='tarjeta'),
     path('admin/', admin.site.urls),
+    path('accounts/',include('django.contrib.auth.urls')),
 ]

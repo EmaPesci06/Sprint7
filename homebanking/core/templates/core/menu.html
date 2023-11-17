@@ -5,4 +5,15 @@
     <li><a href="{% url 'movimientos' %}">Movimientos</a></li>
     <li><a href="{% url 'prestamos' %}">Prestamos</a></li>
     <li><a href="{% url 'tarjeta' %}">Tarjeta</a></li>
+
+    <div>
+        {% if not request.user.is_authenticated %}
+        <a href="{% url 'login' %}">Acceder</a>
+        
+        {% else %}
+        <a href="{% url 'logout' %}">Salir</a>
+        
+        {% endif %}
+
+    </div>
 </ul>

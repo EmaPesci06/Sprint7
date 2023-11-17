@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'prestamos',
     'sucursal',
     'tarjetas',
+    'registration'
 ]
 
 MIDDLEWARE = [
@@ -88,7 +89,7 @@ WSGI_APPLICATION = 'homebanking.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / "itbank.db",
+        'NAME': BASE_DIR / "itbank.sqlite3",
     },
 }
 
@@ -133,3 +134,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+LOGIN_REDIRECT_URL="/"
+LOGOUT_REDIRECT_URL="/"
