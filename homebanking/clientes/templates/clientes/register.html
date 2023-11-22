@@ -1,0 +1,53 @@
+
+<!-- agregamos el bloque extends que tomara el html base-->
+{% extends 'core/base.html' %}
+
+<!-- Agregamos el contenido estatico-->
+
+{% load static %}
+
+<!-- Agregamos el titulo de la home -->
+{% block title %} Prestamo {% endblock %}
+
+
+<!-- indicamos que lo de abaja se dibuje despues del menu armado en la base-->
+{% block content %}
+<form method="POST" action="">
+    {% csrf_token %}
+        <h3>Register Profile</h3>
+
+        <div class="form-field">
+            {{cliente_form.name.label_tag}}
+            {{cliente_form.name}}
+        </div>
+        <div class="form-field">
+            {{form.username.errors}}
+            {{form.username.label_tag}}
+            {{form.username}}
+        </div>
+        <div class="form-field">
+            {{cliente_form.email.label_tag}}
+            {{cliente_form.email}}
+        </div>
+        <div class="form-field">
+            {{cliente_form.address.label_tag}}
+            {{cliente_form.address}}
+        </div>
+        <div class="form-field">
+            {{form.password1.errors}}
+            {{form.password1.label_tag}}
+            {{form.password1}}
+        </div>
+        <div class="form-field">
+            {{form.password2.errors}}
+            {{form.password2.label_tag}}
+            {{form.password2}}
+        </div>
+
+    <hr>
+    <input id="form-button" class="btn btn-success btn-block" type="submit" value="Create Profile">
+    <br>
+        {{form.non_field_errors}}
+    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+</form>
+{% endblock %}

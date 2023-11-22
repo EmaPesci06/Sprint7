@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'cuentas',
     'direcciones',
     'empleado',
-    'login',
     'marca',
     'movimientos',
     'prestamos',
