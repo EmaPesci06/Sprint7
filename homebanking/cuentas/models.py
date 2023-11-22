@@ -8,7 +8,3 @@ class Cuenta(models.Model):
     balance = models.IntegerField()
     iban = models.TextField()
     type = models.TextField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'cuenta'

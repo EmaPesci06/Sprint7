@@ -10,7 +10,3 @@ class Direcciones(models.Model):
     employee = models.ForeignKey(Empleado, models.DO_NOTHING)
     address_0 = models.TextField(db_column='address')  # Field renamed because of name conflict.
     country = models.TextField()
-
-    class Meta:
-        managed = False
-        db_table = 'direcciones'

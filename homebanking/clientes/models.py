@@ -11,10 +11,3 @@ class Cliente(models.Model):
     branch = models.ForeignKey(Sucursal, on_delete=models.CASCADE)
     tipo_cliente = models.CharField(max_length=10)
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'cliente'
-
-    def __str__(self):
-        return f"{self.customer_name} {self.customer_surname}"

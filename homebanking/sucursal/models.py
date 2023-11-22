@@ -6,7 +6,3 @@ class Sucursal(models.Model):
     branch_number = models.BinaryField()
     branch_name = models.TextField()
     branch_address_id = models.IntegerField()
-
-    class Meta:
-        managed = False
-        db_table = 'sucursal'

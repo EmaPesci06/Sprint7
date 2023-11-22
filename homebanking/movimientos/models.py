@@ -6,7 +6,3 @@ class Movimientos(models.Model):
     monto = models.DecimalField(max_digits=10, decimal_places=5, blank=True, null=True)
     tipo_operacion = models.CharField(max_length=50, blank=True, null=True) 
     hora = models.TextField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'movimientos'

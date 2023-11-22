@@ -7,7 +7,3 @@ class Prestamo(models.Model):
     loan_date = models.TextField()
     loan_total = models.IntegerField()
     customer_id = models.IntegerField()
-
-    class Meta:
-        managed = False
-        db_table = 'prestamo'

@@ -9,7 +9,3 @@ class Tarjeta(models.Model):
     issuance_date = models.TextField()
     expiration_date = models.TextField()
     type = models.TextField()
-
-    class Meta:
-        managed = False
-        db_table = 'tarjeta'
