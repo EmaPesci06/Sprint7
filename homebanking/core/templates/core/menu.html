@@ -1,4 +1,4 @@
-<ul class="list-unstyled list-group d-flex flex-row justify-content-center mt-3 mb-3">
+<ul class="list-unstyled list-group d-flex flex-row justify-content-center mt-3 mb-3 col-12">
     <li><a class="list-group-item bg-info" href="{% url 'home' %}">Home</a></li>
     <li><a class="list-group-item bg-info" href="{% url 'cuentas' %}">Cuentas</a></li>
     <li><a class="list-group-item bg-info" href="{% url 'clientes' %}">Clientes</a></li>
@@ -11,8 +11,8 @@
         <a class="list-group-item bg-success" href="{% url 'login' %}">Acceder</a>
         
         {% else %}
-        <a class="list-group-item bg-success" href="{% url 'logout' %}">Salir</a>
-        
+        <a class="list-group-item bg-danger" href="{% url 'logout' %}">Salir</a>
         {% endif %}
     </div>
+    <div class="bg-warning px-3"><p>Hola, {{user.username}}</p></div>
 </ul>

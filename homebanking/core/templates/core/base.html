@@ -14,15 +14,16 @@
 
 </head>
 <body class="bg-secondary">
-    <div id="header">
+    <div id="header" class="bg-info">
     {% include 'core/header.html' %}
     </div>
 
     <div id="content" class="text-center">
-        {% block content %}{% endblock %}
+        {% block content %}
+        {% endblock %}
     </div>
 
-    <div id="footer">
+    <div id="footer" class="bg-info">
         {% include 'core/footer.html' %}
     </div>
 </body>

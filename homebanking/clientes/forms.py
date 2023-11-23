@@ -11,4 +11,4 @@ class createUserForm(UserCreationForm):
 class ClienteForm(forms.ModelForm):
     class Meta:
         model = Cliente
-        fields = ['customer_name', 'customer_surname', 'customer_dni', "dob", "branch", "tipo_cliente"]
+        fields = ['customer_name', 'customer_surname', "customer_dni", "tipo_cliente"]
