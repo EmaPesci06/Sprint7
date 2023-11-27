@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Detalle de Cliente {% endblock %}
+
+{% block content %}
+
+{% include 'core/menu.html' %}
+
+<h2>Detalle de cliente:</h2>
+
+
+<p>Nombre del cliente: <b>{{ cliente.customer_name }}</b></p>
+<p>Apellido del cliente: <b>{{ cliente.customer_surname }}</b></p>
+<p>DNI del cliente: <b>{{ cliente.customer_dni }}</b></p>
+<p>Tipo de cliente: <b>{{ cliente.tipo_cliente }}</b></p>
+
+{% endblock %}

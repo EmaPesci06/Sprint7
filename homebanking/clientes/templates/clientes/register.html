@@ -1,11 +1,80 @@
 {% extends 'core/base.html' %}
 
-{% block title%} Clientes {% endblock %}
+{% block title %}Registro de cliente{% endblock %}
 
 {% block content %}
 
 {% include 'core/menu.html' %}
 
-<h2>Detalle de cliente</h2>
+<div class="container mt-4">
+  <h2>Registro de clientes</h2>
+
+  <form method="POST" action="">
+    {% csrf_token %}
+    <h3>Register Profile</h3>
+
+    <!-- CreateUserForm Fields -->
+    <div class="form-group">
+      {{ form.username.errors }}
+      {{ form.username.label_tag }}
+      {{ form.username }}
+    </div>
+    <div class="form-group">
+      {{ form.password1.errors }}
+      {{ form.password1.label_tag }}
+      {{ form.password1 }}
+    </div>
+    <div class="form-group">
+      {{ form.password2.errors }}
+      {{ form.password2.label_tag }}
+      {{ form.password2 }}
+    </div>
+
+    <!-- ClienteForm Fields -->
+    <div class="form-group">
+      {{ profile_form.name.label_tag }}
+      {{ profile_form.name }}
+    </div>
+    <div class="form-group">
+      {{ profile_form.email.label_tag }}
+      {{ profile_form.email }}
+    </div>
+    <div class="form-group">
+      {{ profile_form.address.label_tag }}
+      {{ profile_form.address }}
+    </div>
+
+    <div class="form-group">
+      {{ profile_form.customer_name.label_tag }}
+      {{ profile_form.customer_name }}
+    </div>
+    <div class="form-group">
+      {{ profile_form.customer_surname.label_tag }}
+      {{ profile_form.customer_surname }}
+    </div>
+    <div class="form-group">
+      {{ profile_form.customer_dni.label_tag }}
+      {{ profile_form.customer_dni }}
+    </div>
+    <div class="form-group">
+      {{ profile_form.tipo_cliente.label_tag }}
+      {{ profile_form.tipo_cliente }}
+    </div>
+    <div class="form-group">
+      {{ profile_form.dob.label_tag }}
+      {{ profile_form.dob }}
+    </div>
+    <div class="form-group">
+      {{ profile_form.branch_id.label_tag }}
+      {{ profile_form.branch_id }}
+    </div>
+
+    <hr>
+    <button class="btn btn-success btn-block" type="submit">Create Profile</button>
+    <br>
+    {{ form.non_field_errors }}
+    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+  </form>
+</div>
 
 {% endblock %}

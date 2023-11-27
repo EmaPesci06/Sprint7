@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+
+
+{% block title %} Lista de Clientes {% endblock %} 
+
+{% block content %} 
+
+{% include 'core/menu.html' %}
+
+<h2>Lista de Clientes:</h2>
+
+<ul>
+  {% for cliente in clientes %}
+  <a
+    href="{% url 'detalle_cliente' cliente.customer_id %}"
+    class="list-group-item mt-3 mr-5 bg-success">{{ cliente.customer_name }} {{ cliente.customer_surname }}</a>
+  {% endfor %}
+</ul>
+
+{% endblock %}

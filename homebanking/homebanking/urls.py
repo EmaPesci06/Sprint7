@@ -28,7 +28,9 @@ from tarjetas import views as tarjetas_template
 urlpatterns = [
     path('', home_template.home_template, name='home'),
     path('cuentas/', cuentas_template.cuentas_templates, name='cuentas'),
-    path('clientes/', clientes_templates.cliente_template, name="clientes"),
+    path('clientes/', clientes_templates.register_page, name='clientes'),
+    path('lista_clientes/', clientes_templates.clientes_template, name="lista_clientes"),
+    path('lista_clientes/<int:customer_id>', clientes_templates.detalle_cliente, name="detalle_cliente"),
     path('movimientos/', movimientos_template.movimientos_template, name='movimientos'),
     path('prestamo/', prestamos_template.prestamos_template, name='prestamos'),
     path('tarjetas/', tarjetas_template.tarjetas_template, name='tarjeta'),
