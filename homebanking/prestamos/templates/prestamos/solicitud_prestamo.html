@@ -1,0 +1,25 @@
+<!-- prestamos/templates/prestamos/solicitud_prestamo.html -->
+{% extends 'core/base.html' %}
+
+{% block title %}Solicitud de Préstamo{% endblock %}
+
+{% block content %}
+
+{% include 'core/menu.html' %}
+  <h2>Solicitud de Préstamo</h2>
+
+  <form method="post" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <input type="submit" value="Enviar Solicitud">
+  </form>
+
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock %}

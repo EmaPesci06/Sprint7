@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Prestamo
+from .models import SolicitudPrestamo
 
 # Register your models here.
-admin.site.register(Prestamo)
+admin.site.register(SolicitudPrestamo)

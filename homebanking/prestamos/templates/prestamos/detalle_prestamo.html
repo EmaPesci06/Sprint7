@@ -1,0 +1,20 @@
+<!-- prestamos/templates/prestamos/detalle_prestamo.html -->
+{% extends 'core/base.html' %}
+
+{% block title %}Detalle del Préstamo{% endblock %}
+
+{% block content %}
+
+{% include 'core/menu.html' %}
+
+  <h2>Detalle del Préstamo</h2>
+
+  <p><strong>Tipo de Préstamo:</strong> {{ prestamo.tipo_prestamo }}</p>
+  <p><strong>Fecha de Inicio:</strong> {{ prestamo.fecha_inicio }}</p>
+  <p><strong>Monto Solicitado:</strong> {{ prestamo.monto }}</p>
+  <p><strong>Aprobada:</strong> {% if prestamo.aprobada %}Sí{% else %}No{% endif %}</p>
+
+  <!-- Puedes agregar más detalles según tu modelo de datos -->
+
+  <a href="{% url 'prestamos' %}">Volver a la lista de préstamos</a>
+{% endblock %}
